@@ -1,0 +1,4 @@
+.active-tab {
+  color: #ef4444 !important; /* text-red-500 */
+  border-bottom: 2px solid #ef4444 !important; /* border-red-500 */
+}

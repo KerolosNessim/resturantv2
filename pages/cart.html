@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>resturant</title>
+    <!-- favicon -->
+    <link rel="shortcut icon" href="../images/logo.png" type="image/x-icon" />
+    <!-- tailwind css -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome cdn -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.5.2/css/all.min.css"
+    />
+
+    <!-- custom css -->
+    <link rel="stylesheet" href="./css/main.css" />
+  </head>
+  <body class="bg-no-repeat bg-cover bg-center bg-fixed">
+    <!-- navbar  -->
+    <nav class="bg-white py-4 shadow-lg">
+      <div class="w-[95%] lg:w-[90%] mx-auto flex justify-between items-center">
+        <!-- burger button -->
+        <button id="sidebar-open" class="text-2xl">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+        <a href="../index.html" class="text-2xl font-bold text-gray-800"
+          ><img src="../images/logo.png" alt="logo" class="w-[100px]"
+        /></a>
+        <!-- delete cart -->
+        <button
+          class="text-lg font-bold py-2 px-4 bg-red-500 text-white rounded-md flex items-center gap-2 hover:bg-red-600 transition-all duration-300"
+        >
+          <i class="fa-solid fa-trash"></i>
+          Remove Cart
+        </button>
+      </div>
+    </nav>
+    <!-- sidebar content -->
+    <div
+      id="sidebar-overlay"
+      class="w-full h-full bg-black/50 fixed top-0 left-0 z-10 opacity-0 invisible transition-opacity duration-300"
+    >
+      <div
+        id="sidebar-content"
+        class="relative w-full md:w-3/4 lg:w-1/3 h-full bg-white py-8 px-6 space-y-6 overflow-y-scroll -translate-x-full transition-transform duration-300"
+      >
+        <!-- close button -->
+        <button
+          id="sidebar-close"
+          class="absolute top-4 end-4 text-2xl hover:text-red-500"
+        >
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+        <!-- logo -->
+        <a
+          href="./index.html"
+          class="mx-auto block w-fit hover:scale-105 transition-all duration-300"
+        >
+          <img src="../images/logo.png" alt="logo" class="w-[100px]" />
+        </a>
+        <!-- phone number -->
+        <a href="#" class="flex items-center justify-between"
+          ><p class="text-xl font-bold text-gray-800">
+            <i class="fa-solid fa-phone me-2 text-red-500"></i> Phone Number
+          </p>
+          <p class="text-xl font-bold text-gray-800">+123456789</p></a
+        >
+        <!-- links -->
+        <div class="space-y-4">
+          <!-- whats app -->
+          <a
+            href="#"
+            class="block w-full py-4 hover:scale-105 transition-all duration-300 rounded-md bg-green-500 text-white flex items-center justify-center gap-2 text-lg"
+            ><i class="fa-brands fa-whatsapp"></i>
+            whats app
+          </a>
+          <!-- location -->
+          <a
+            href="#"
+            class="block w-full py-4 hover:scale-105 transition-all duration-300 rounded-md bg-red-500 text-white flex items-center justify-center gap-2 text-lg"
+            ><i class="fa-solid fa-location-dot"> </i>location</a
+          >
+          <!-- home page -->
+          <a
+            href="#"
+            class="block w-full py-4 hover:scale-105 transition-all duration-300 rounded-md bg-black text-white flex items-center justify-center gap-2 text-lg"
+            ><i class="fa-solid fa-house"> </i>Home</a
+          >
+        </div>
+        <!-- languages -->
+        <div class="space-y-4">
+          <p class="text-xl font-bold">
+            <i class="fa-solid fa-globe me-2 text-red-500"></i> Languages
+          </p>
+          <!-- english -->
+          <button
+            class="block w-full p-2 hover:scale-105 transition-all duration-300 rounded-md border-2 border-black flex items-center gap-2 text-lg"
+          >
+            <img src="../images/en.png" alt="english" class="size-[30px]" />
+            English
+
+            <i class="fa-solid fa-check ms-auto"></i>
+          </button>
+          <!-- turkey -->
+          <button
+            class="block w-full p-2 hover:scale-105 transition-all duration-300 rounded-md border-2 border-black flex items-center gap-2 text-lg"
+          >
+            <img src="../images/tr.png" alt="english" class="size-[30px]" />
+            Turkish
+          </button>
+          <!-- arabic -->
+          <button
+            class="block w-full p-2 hover:scale-105 transition-all duration-300 rounded-md border-2 border-black flex items-center gap-2 text-lg"
+          >
+            <img src="../images/ar.png" alt="english" class="size-[30px]" />
+            Arabic
+          </button>
+        </div>
+        <!-- social links -->
+        <div class="space-y-4">
+          <p class="text-xl font-bold">
+            <i class="fa-solid fa-link me-2 text-red-500"></i> Social Links
+          </p>
+          <div class="flex items-center gap-2 flex-wrap">
+            <a
+              href="#"
+              class="size-[50px] py-4 hover:scale-105 transition-all duration-300 rounded-md bg-blue-500 text-white flex items-center justify-center gap-2 text-lg"
+              ><i class="fa-brands fa-facebook"></i>
+            </a>
+            <a
+              href="#"
+              class="size-[50px] py-4 hover:scale-105 transition-all duration-300 rounded-md bg-pink-500 text-white flex items-center justify-center gap-2 text-lg"
+              ><i class="fa-brands fa-instagram"></i>
+            </a>
+            <a
+              href="#"
+              class="size-[50px] py-4 hover:scale-105 transition-all duration-300 rounded-md bg-black text-white flex items-center justify-center gap-2 text-lg"
+              ><i class="fa-brands fa-tiktok"></i>
+            </a>
+            <a
+              href="#"
+              class="size-[50px] py-4 hover:scale-105 transition-all duration-300 rounded-md bg-red-600 text-white flex items-center justify-center gap-2 text-lg"
+              ><i class="fa-brands fa-youtube"></i>
+            </a>
+          </div>
+        </div>
+        <!-- design by -->
+        <p class="text-center">
+          <i class="fa-solid fa-copyright text-red-500"></i> Design By
+          <a href="#" class="font-bold text-blue-500">Subcode</a>
+        </p>
+      </div>
+    </div>
+    <!-- cart detailes -->
+    <section class="w-[95%] lg:w-[90%] mx-auto py-8">
+      <div class="grid grid-cols-12 gap-4">
+        <!-- ditals panel -->
+        <div class="lg:col-span-4 md:col-span-5 col-span-12 space-y-4">
+          <!-- cobon code -->
+          <div
+            class="bg-white bg-[url('../images/light-patten.svg')] bg-cover bg-center p-6 rounded-xl space-y-4 shadow-xl"
+          >
+            <p class="text-red-500 text-xl font-bold">
+              Have a Cobon Code <span class="text-black">?</span>
+            </p>
+            <div class="flex items-center gap-2">
+              <input
+                type="text"
+                placeholder="Cobon Code"
+                class="ps-4 bg-transparent w-full h-10 border-2 border-red-300 rounded-lg focus:outline-red-500 focus:border-red-500"
+              />
+              <button
+                class="w-1/3 h-10 bg-red-500 text-white rounded-lg hover:bg-red-600 transition-all duration-300"
+              >
+                Apply
+              </button>
+            </div>
+          </div>
+          <!-- detailes -->
+          <div
+            class="bg-white bg-[url('../images/light-patten.svg')] bg-cover bg-center p-6 rounded-xl shadow-xl space-y-4"
+          >
+            <ul class="space-y-4">
+              <li class="flex justify-between">
+                <p class="text-lg font-bold">Subtotal:</p>
+                <p class="text-red-500 font-bold">$12.99</p>
+              </li>
+              <li class="flex justify-between">
+                <p class="text-lg font-bold">shipping:</p>
+                <p class="text-red-500 font-bold">$2,99</p>
+              </li>
+              <li class="flex justify-between">
+                <p class="text-lg font-bold">Discount:</p>
+                <p class="text-red-500 font-bold">$0,00</p>
+              </li>
+              <li class="border-b border-red-300"></li>
+              <li class="flex justify-between">
+                <p class="text-lg text-red-500 font-bold">Total:</p>
+                <p class="font-bold">$15.99</p>
+              </li>
+            </ul>
+            <!-- checkout -->
+            <form class="space-y-4">
+              <input
+                type="number"
+                placeholder="Phone Number"
+                class="ps-4 bg-transparent w-full h-10 border-2 border-red-300 rounded-lg focus:outline-red-500 focus:border-red-500"
+              />
+              <textarea
+                placeholder="Order Note"
+                class="ps-4 bg-transparent w-full h-40 border-2 border-red-300 rounded-lg focus:outline-red-500 focus:border-red-500"
+              ></textarea>
+              <button
+                class="w-full h-12 bg-green-500 text-white text-lg rounded-lg hover:bg-green-600 transition-all duration-300"
+              >
+                <i class="fa-brands fa-whatsapp"></i>
+                send order via whatsapp
+              </button>
+            </form>
+          </div>
+        </div>
+
+        <!-- products -->
+        <div class="lg:col-span-8 md:col-span-7 col-span-12 space-y-4">
+          <!-- cart card -->
+          <div
+            class="bg-white bg-[url('../images/light-patten.svg')] bg-cover bg-center p-6 rounded-xl space-y-4 shadow-xl flex items-center gap-4 max-md:flex-col"
+          >
+            <!-- img -->
+            <img
+              src="../images/hero-2.png"
+              alt="product"
+              class="md:w-[25%] w-full max-md:h-60 flex-shrink-0 object-contain"
+            />
+            <!-- content -->
+            <div class="text-lg font-bold flex flex-col gap-3">
+              <h3 class="lg:text-2xl text-xl font-bold">Chesse Burger</h3>
+              <p class="text-gray-600 text-base font-normal line-clamp-3">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Recusandae officiis ad labore, quos a at sed. Optio pariatur
+                debitis odit mollitia qui doloribus magni explicabo. Ratione ea
+                aspernatur voluptate ducimus.
+              </p>
+              <div class="flex items-center justify-between">
+                <!-- price -->
+                <p
+                  class="bg-gray-200 p-2 rounded-md shadow-md lg:w-1/3 text-center"
+                >
+                  12.99$
+                </p>
+                <p>x</p>
+
+                <div class="flex items-center gap-2">
+                  <button
+                    class="increase bg-red-500 text-white size-8 rounded-full hover:bg-red-600 transition-all"
+                  >
+                    +
+                  </button>
+                  <p class="quantity">1</p>
+                  <button
+                    class="decrease bg-red-500 text-white size-8 rounded-full hover:bg-red-600 transition-all"
+                  >
+                    -
+                  </button>
+                </div>
+                <p
+                  class="bg-gray-200 p-2 rounded-md shadow-md lg:w-1/3 text-center"
+                >
+                  12.99$
+                </p>
+              </div>
+            </div>
+          </div>
+          <div
+            class="bg-white bg-[url('../images/light-patten.svg')] bg-cover bg-center p-6 rounded-xl space-y-4 shadow-xl flex items-center gap-4 max-md:flex-col"
+          >
+            <!-- img -->
+            <img
+              src="../images/hero-3.png"
+              alt="product"
+              class="md:w-[25%] w-full max-md:h-60 flex-shrink-0 object-contain"
+            />
+            <!-- content -->
+            <div class="text-lg font-bold flex flex-col gap-3">
+              <h3 class="lg:text-2xl text-xl font-bold">Three Chesse Pizza</h3>
+              <p class="text-gray-600 text-base font-normal line-clamp-3">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Recusandae officiis ad labore, quos a at sed. Optio pariatur
+                debitis odit mollitia qui doloribus magni explicabo. Ratione ea
+                aspernatur voluptate ducimus.
+              </p>
+              <div class="flex items-center justify-between">
+                <!-- price -->
+                <p
+                  class="bg-gray-200 p-2 rounded-md shadow-md lg:w-1/3 text-center"
+                >
+                  12.99$
+                </p>
+                <p>x</p>
+
+                <div class="flex items-center gap-2">
+                  <button
+                    class="increase bg-red-500 text-white size-8 rounded-full hover:bg-red-600 transition-all"
+                  >
+                    +
+                  </button>
+                  <p class="quantity">1</p>
+                  <button
+                    class="decrease bg-red-500 text-white size-8 rounded-full hover:bg-red-600 transition-all"
+                  >
+                    -
+                  </button>
+                </div>
+                <p
+                  class="bg-gray-200 p-2 rounded-md shadow-md lg:w-1/3 text-center"
+                >
+                  12.99$
+                </p>
+              </div>
+            </div>
+          </div>
+          <div
+            class="bg-white bg-[url('../images/light-patten.svg')] bg-cover bg-center p-6 rounded-xl space-y-4 shadow-xl flex items-center gap-4 max-md:flex-col"
+          >
+            <!-- img -->
+            <img
+              src="../images/hero-img.png"
+              alt="product"
+              class="md:w-[25%] w-full max-md:h-60 flex-shrink-0 object-contain"
+            />
+            <!-- content -->
+            <div class="text-lg font-bold flex flex-col gap-3">
+              <h3 class="lg:text-2xl text-xl font-bold">Pasta Red Souce</h3>
+              <p class="text-gray-600 text-base font-normal line-clamp-3">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Recusandae officiis ad labore, quos a at sed. Optio pariatur
+                debitis odit mollitia qui doloribus magni explicabo. Ratione ea
+                aspernatur voluptate ducimus.
+              </p>
+              <div class="flex items-center justify-between">
+                <!-- price -->
+                <p
+                  class="bg-gray-200 p-2 rounded-md shadow-md lg:w-1/3 text-center"
+                >
+                  12.99$
+                </p>
+                <p>x</p>
+
+                <div class="flex items-center gap-2">
+                  <button
+                    class="increase bg-red-500 text-white size-8 rounded-full hover:bg-red-600 transition-all"
+                  >
+                    +
+                  </button>
+                  <p class="quantity">1</p>
+                  <button
+                    class="decrease bg-red-500 text-white size-8 rounded-full hover:bg-red-600 transition-all"
+                  >
+                    -
+                  </button>
+                </div>
+                <p
+                  class="bg-gray-200 p-2 rounded-md shadow-md lg:w-1/3 text-center"
+                >
+                  12.99$
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- js -->
+    <script src="../js/main.js"></script>
+  </body>
+</html>
