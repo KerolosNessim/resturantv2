@@ -2,3 +2,13 @@
   color: #ef4444 !important; /* text-red-500 */
   border-bottom: 2px solid #ef4444 !important; /* border-red-500 */
 }
+
+
+.swiper-pagination-bullet {
+  background-color: gray;
+  opacity: 0.7;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: #ef4444;
+}

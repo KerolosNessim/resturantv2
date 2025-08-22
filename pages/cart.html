@@ -15,7 +15,7 @@
     />
 
     <!-- custom css -->
-    <link rel="stylesheet" href="./css/main.css" />
+    <link rel="stylesheet" href="../css/index.css" />
   </head>
   <body class="bg-no-repeat bg-cover bg-center bg-fixed">
     <!-- navbar  -->
@@ -72,22 +72,26 @@
           <!-- whats app -->
           <a
             href="#"
-            class="block w-full py-4 hover:scale-105 transition-all duration-300 rounded-md bg-green-500 text-white flex items-center justify-center gap-2 text-lg"
-            ><i class="fa-brands fa-whatsapp"></i>
-            whats app
+            class="block w-full h-20 text-xl hover:scale-105 transition-all duration-300 rounded-md bg-gradient-to-r from-green-400 to-green-700 text-white flex items-center justify-center gap-2 text-lg"
+          >
+            <i class="fa-brands fa-whatsapp text-2xl"></i> WhatsApp
           </a>
+
           <!-- location -->
           <a
             href="#"
-            class="block w-full py-4 hover:scale-105 transition-all duration-300 rounded-md bg-red-500 text-white flex items-center justify-center gap-2 text-lg"
-            ><i class="fa-solid fa-location-dot"> </i>location</a
+            class="block w-full py-4 hover:scale-105 transition-all duration-300 rounded-md border-2 border-black flex items-center justify-center gap-2 font-bold"
           >
+            <i class="fa-solid fa-location-dot"></i> Location
+          </a>
+
           <!-- home page -->
           <a
             href="#"
-            class="block w-full py-4 hover:scale-105 transition-all duration-300 rounded-md bg-black text-white flex items-center justify-center gap-2 text-lg"
-            ><i class="fa-solid fa-house"> </i>Home</a
+            class="block w-full py-4 hover:scale-105 transition-all duration-300 rounded-md border-2 border-black bg-gradient-to-r from-gray-700 to-black text-white flex items-center justify-center gap-2 font-bold"
           >
+            <i class="fa-solid fa-house"></i> Home
+          </a>
         </div>
         <!-- languages -->
         <div class="space-y-4">
@@ -124,25 +128,36 @@
             <i class="fa-solid fa-link me-2 text-red-500"></i> Social Links
           </p>
           <div class="flex items-center gap-2 flex-wrap">
+            <!-- Facebook -->
             <a
               href="#"
-              class="size-[50px] py-4 hover:scale-105 transition-all duration-300 rounded-md bg-blue-500 text-white flex items-center justify-center gap-2 text-lg"
-              ><i class="fa-brands fa-facebook"></i>
+              class="size-[50px] flex items-center justify-center text-lg rounded-md border border-blue-500 text-blue-500 transition-all duration-300 hover:bg-blue-500 hover:text-white hover:scale-105"
+            >
+              <i class="fa-brands fa-facebook"></i>
             </a>
+
+            <!-- Instagram -->
             <a
               href="#"
-              class="size-[50px] py-4 hover:scale-105 transition-all duration-300 rounded-md bg-pink-500 text-white flex items-center justify-center gap-2 text-lg"
-              ><i class="fa-brands fa-instagram"></i>
+              class="size-[50px] flex items-center justify-center text-lg rounded-md border border-pink-500 text-pink-500 transition-all duration-300 hover:bg-pink-500 hover:text-white hover:scale-105"
+            >
+              <i class="fa-brands fa-instagram"></i>
             </a>
+
+            <!-- TikTok -->
             <a
               href="#"
-              class="size-[50px] py-4 hover:scale-105 transition-all duration-300 rounded-md bg-black text-white flex items-center justify-center gap-2 text-lg"
-              ><i class="fa-brands fa-tiktok"></i>
+              class="size-[50px] flex items-center justify-center text-lg rounded-md border border-black text-black transition-all duration-300 hover:bg-black hover:text-white hover:scale-105"
+            >
+              <i class="fa-brands fa-tiktok"></i>
             </a>
+
+            <!-- YouTube -->
             <a
               href="#"
-              class="size-[50px] py-4 hover:scale-105 transition-all duration-300 rounded-md bg-red-600 text-white flex items-center justify-center gap-2 text-lg"
-              ><i class="fa-brands fa-youtube"></i>
+              class="size-[50px] flex items-center justify-center text-lg rounded-md border border-red-600 text-red-600 transition-all duration-300 hover:bg-red-600 hover:text-white hover:scale-105"
+            >
+              <i class="fa-brands fa-youtube"></i>
             </a>
           </div>
         </div>
@@ -203,14 +218,141 @@
             </ul>
             <!-- checkout -->
             <form class="space-y-4">
-              <input
-                type="number"
-                placeholder="Phone Number"
-                class="ps-4 bg-transparent w-full h-10 border-2 border-red-300 rounded-lg focus:outline-red-500 focus:border-red-500"
-              />
+              <!-- Receiving way -->
+              <div>
+                <h3 class="text-lg font-bold">Order Receiving Way</h3>
+                <div class="flex flex-col gap-3 mt-2">
+                  <div class="flex items-center gap-2">
+                    <input
+                      type="radio"
+                      name="receiving-way"
+                      id="receiving-way-1"
+                      class="size-5 accent-red-500"
+                    />
+                    <label for="receiving-way-1">Pick up from Branch</label>
+                  </div>
+                  <div class="flex items-center gap-2">
+                    <input
+                      type="radio"
+                      name="receiving-way"
+                      id="receiving-way-2"
+                      class="size-5 accent-red-500"
+                    />
+                    <label for="receiving-way-2">Home Delivery</label>
+                  </div>
+                </div>
+              </div>
+              <!-- address -->
+              <textarea
+                id="addressInput"
+                placeholder="Address"
+                class="p-2 hidden bg-transparent w-full h-28 border-2 border-red-300 rounded-lg focus:outline-red-500 focus:border-red-500"
+              ></textarea>
+              <!-- Country selector -->
+              <div class="w-full flex gap-2">
+                <div class="relative w-20">
+                  <!-- Selected country -->
+                  <button
+                    id="countryBtn"
+                    type="button"
+                    class="flex items-center gap-2 px-3 h-10 border-2 border-red-300 rounded-lg w-full bg-transparent focus:border-red-500"
+                  >
+                    <img
+                      id="selectedFlag"
+                      src="https://flagcdn.com/w20/tr.png"
+                      class="w-5 h-5 rounded-sm"
+                    />
+                    <span id="selectedCode" class="text-gray-700">+90</span>
+                    <svg
+                      class="ml-auto w-4 h-4 text-gray-500"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M19 9l-7 7-7-7"
+                      />
+                    </svg>
+                  </button>
+
+                  <!-- Dropdown -->
+                  <div
+                    id="countryList"
+                    class="absolute hidden mt-1 min-w-[140%] left-0 bg-white border rounded-lg shadow-lg z-10 max-h-40 overflow-y-auto"
+                  >
+                    <!-- تركيا الافتراضي -->
+                    <div
+                      class="flex items-center gap-2 px-3 py-2 cursor-pointer hover:bg-gray-100"
+                      data-flag="https://flagcdn.com/w20/tr.png"
+                      data-code="+90"
+                    >
+                      <img
+                        src="https://flagcdn.com/w20/tr.png"
+                        class="w-5 h-5 rounded-sm"
+                      />
+                      <span> (+90)</span>
+                    </div>
+                    <div
+                      class="flex items-center gap-2 px-3 py-2 cursor-pointer hover:bg-gray-100"
+                      data-flag="https://flagcdn.com/w20/eg.png"
+                      data-code="+20"
+                    >
+                      <img
+                        src="https://flagcdn.com/w20/eg.png"
+                        class="w-5 h-5 rounded-sm"
+                      />
+                      <span> (+20)</span>
+                    </div>
+                    <div
+                      class="flex items-center gap-2 px-3 py-2 cursor-pointer hover:bg-gray-100"
+                      data-flag="https://flagcdn.com/w20/us.png"
+                      data-code="+1"
+                    >
+                      <img
+                        src="https://flagcdn.com/w20/us.png"
+                        class="w-5 h-5 rounded-sm"
+                      />
+                      <span> (+1)</span>
+                    </div>
+                    <div
+                      class="flex items-center gap-2 px-3 py-2 cursor-pointer hover:bg-gray-100"
+                      data-flag="https://flagcdn.com/w20/gb.png"
+                      data-code="+44"
+                    >
+                      <img
+                        src="https://flagcdn.com/w20/gb.png"
+                        class="w-5 h-5 rounded-sm"
+                      />
+                      <span>(+44)</span>
+                    </div>
+                    <div
+                      class="flex items-center gap-2 px-3 py-2 cursor-pointer hover:bg-gray-100"
+                      data-flag="https://flagcdn.com/w20/ae.png"
+                      data-code="+971"
+                    >
+                      <img
+                        src="https://flagcdn.com/w20/ae.png"
+                        class="w-5 h-5 rounded-sm"
+                      />
+                      <span> (+971)</span>
+                    </div>
+                  </div>
+                </div>
+                <!-- Phone Input -->
+                <input
+                  id="phoneInput"
+                  type="tel"
+                  placeholder="Phone Number"
+                  class="flex-1 h-10 px-3 bg-transparent border-2 border-red-300 rounded-lg focus:border-red-500 focus:outline-red-500"
+                />
+              </div>
+
               <textarea
                 placeholder="Order Note"
-                class="ps-4 bg-transparent w-full h-40 border-2 border-red-300 rounded-lg focus:outline-red-500 focus:border-red-500"
+                class="p-2 bg-transparent w-full h-28 border-2 border-red-300 rounded-lg focus:outline-red-500 focus:border-red-500"
               ></textarea>
               <button
                 class="w-full h-12 bg-green-500 text-white text-lg rounded-lg hover:bg-green-600 transition-all duration-300"
