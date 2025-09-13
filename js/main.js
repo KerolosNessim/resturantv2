@@ -221,4 +221,35 @@ document.addEventListener("DOMContentLoaded", () => {
       },
     });
   }
+
+  // coupon logic
+  const openBtn = document.getElementById("openCouponBtn");
+  const closeBtn = document.getElementById("closeCouponBtn");
+  const modal = document.getElementById("couponModal");
+  const copyBtn = document.getElementById("copyCouponBtn");
+
+  // فتح المودال
+  openBtn.addEventListener("click", () => {
+    modal.classList.remove("hidden");
+  });
+
+  // قفل المودال بزر ✕
+  closeBtn.addEventListener("click", () => {
+    modal.classList.add("hidden");
+  });
+
+  // قفل المودال لما تدوس على الـ overlay
+  modal.addEventListener("click", (e) => {
+    if (e.target === modal) {
+      modal.classList.add("hidden");
+    }
+  });
+
+  // نسخ الكوبون
+  copyBtn.addEventListener("click", () => {
+    const code = "SAVE10";
+    navigator.clipboard.writeText(code);
+    alert("Coupon copied: " + code);
+  });
+
 });
